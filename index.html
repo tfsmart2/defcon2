@@ -19,6 +19,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/modal.css" />
 
     <!-- Custom Font -->
     <link
@@ -608,11 +609,11 @@
                     Withdraw
                   </button>
                 </div>
-                <!-- <div class="col-12">
+                 <div class="col-12">
                 <button class="btn btn-danger mt-3 w-100" data-toggle="modal" data-target="#statsModal">
                   STATS
                 </button>
-              </div> -->
+              </div> 
               </div>
             </div>
           </div>
@@ -721,136 +722,186 @@
         </div>
       </div>
 
-      <!-- Statistics Modal -->
-      <!-- <div class="modal fade" id="statsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
+    <!-- Statistics Modal -->
+    <!-- Statistics Modal -->
+    <div class="modal fade popupsection px-5" id="statsModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Showing Statistics of Username
-            </h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <div class="modal-body">
+            <button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-          </div>
-          <div class="modal-body">
-            <h2 class="text-center">Wallet Stats</h2>
+            <h2 class="h2basictitle text-center">Wallet Stats</h2>
             <div class="divider"></div>
-            <div class="row pt-4">
+            <div class="row pt-4 formaddress">
               <div class="col-md-6">
-                <h5 class="text-center">Your TRX Wallet Address</h5>
+                <h5 class="h5basictitle text-center">Your TRX Wallet Address</h5>
                 <div class="input-group">
                   <input type="text" readonly="" class="form-control bigger-font" id="walletAddress"
-                    value="aljljsflsfkhf6242jfdhk2937">
+                    value="aljljsflsfkhf6242jfdhk2937" disabled>
                 </div>
               </div>
               <div class="col-md-6">
-                <h5 class="text-center">Your Referral Link</h5>
+                <h5 class="h5basictitle text-center">Your Sponsor Address</h5>
                 <div class="input-group">
-                  <input type="text" readonly="" class="form-control bigger-font" id="walletAddress"
-                    value="aljljsflsfkhf6242jfdhk2937">
+                  <input type="text" readonly="" class="form-control bigger-font" id="sponsorAddress"
+                    value="aljljsflsfkhf6242jfdhk2937" disabled>
                 </div>
               </div>
             </div>
             <div class="dashed-border"></div>
             <div class="row">
-              <div class="col-md-6 b-right">
-                <h5 class="text-center">Capital</h5>
-                <h6>Actual Capital <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
-                <h6>Investable Capital <a tabindex="2" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
-                <h6>Total Capital</h6>
-                <p>0.00 TRX</p>
+              <div class="col-md-6 bm-right">
+                <div class="boxcontain">
+                  <h5 class="h5basictitle01 text-center">Capital</h5>
+                  <h6>Actual Capital <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
+                      data-toggle="popover" data-trigger="focus"
+                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                  </h6>
+                  <p>0.00 TRX</p>
+                  <h6>Investable Capital <a tabindex="2" class="btn d-inline btn-outline-success p-1" role="button"
+                      data-toggle="popover" data-trigger="focus"
+                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                  </h6>
+                  <p>0.00 TRX</p>
+                  <h6>Total Capital<a tabindex="3" class="btn d-inline btn-outline-success p-1" role="button"
+                      data-toggle="popover" data-trigger="focus"
+                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                  </h6>
+                  <p>0.00 TRX</p>
+                </div>
               </div>
               <div class="col-md-6">
-                <h5 class="text-center">Capital + Invest (C+I)</h5>
-                <h6>C+I Available <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
-                <h6>C+I Withdrawn <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
-                <h6>Total C+I Generated <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
+                <div class="boxcontain">
+                  <h5 class="h5basictitle01 text-center">Capital + Invest (C+I)</h5>
+                  <h6>C+I Available <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
+                      data-toggle="popover" data-trigger="focus"
+                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                  </h6>
+                  <p>0.00 TRX</p>
+                  <h6>C+I Withdrawn <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
+                      data-toggle="popover" data-trigger="focus"
+                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                  </h6>
+                  <p>0.00 TRX</p>
+                  <h6 class='d-flex'>Total C+I Generated /<br> Total C+I at 200% <a tabindex="1"
+                      class="btn d-inline btn-outline-success p-1" role="button" data-toggle="popover"
+                      data-trigger="focus"
+                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                  </h6>
+                  <p>0.00 TRX/0.00TRX</p>
+                </div>
               </div>
             </div>
             <div class="dashed-border"></div>
             <div class="row">
-              <div class="col-md-6 b-right">
-                <h6>Totlal Invested: <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
-                <h6>Total Reinvested: <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
-                <h6>Total Payout: <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="depositesinner">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 bm-right">
+                      <div class="totaldeposites">
+                        <h6>Totlal Invested <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
+                            data-toggle="popover" data-trigger="focus"
+                            data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                        </h6>
+                        <p>0.00 TRX</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <div class="numberdeposites">
+                        <h6>Number of deposits : <span>0</span></h6>
+                        <p class="lddatetitle">Last Deposit Date</p>
+                        <p class="lddate">12/2/2020 <span>20:20 UTC-50 TRX</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-6">
-                <h6>Number of deposits: <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0</p>
-                <h6>Last Deposit Date: <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
-                <h6>Number of reinvestments: <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
-                <h6>Last reinvestment date: <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
-                <h6>No. of payouts: <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
-                <h6>Last payout date: <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
-                    data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="depositesinner">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 bm-right">
+                      <div class="totaldeposites">
+                        <h6>Total Reinvested <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
+                            data-toggle="popover" data-trigger="focus"
+                            data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                        </h6>
+                        <p>0.00 TRX</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <div class="numberdeposites">
+                        <h6>Number of deposits : <span>0</span></h6>
+                        <p class="lddatetitle">Last Deposit Date</p>
+                        <p class="lddate">12/2/2020 <span>20:20 UTC-50 TRX</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="depositesinner">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 bm-right">
+                      <div class="totaldeposites">
+                        <h6>Total Payout <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
+                            data-toggle="popover" data-trigger="focus"
+                            data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                        </h6>
+                        <p>0.00 TRX</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <div class="numberdeposites">
+                        <h6>Number of deposits : <span>0</span></h6>
+                        <p class="lddatetitle">Last Deposit Date</p>
+                        <p class="lddate">12/2/2020 <span>20:20 UTC-50 TRX</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="dashed-border"></div>
             <div class="row">
-              <div class="col-md-6 b-right">
-                <h6>Total Referral Commission: <a tabindex="1" class="btn d-inline btn-outline-success p-1"
-                    role="button" data-toggle="popover" data-trigger="focus"
-                    data-content="And here's some amazing content. It's very engaging. Right?">?</a></h6>
-                <p>0.00 TRX</p>
-              </div>
-              <div class="col-md-6">
-                <p><b>1st level:</b> 0</p>
-                <p><b>2nd level:</b> 0</p>
-                <p><b>3rd level:</b> 0</p>
-                <p><b>4th level:</b> 0</p>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="referralComsion">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <div class="referraltext">
+                        <h6>Total Referral Commission <a tabindex="1" class="btn d-inline btn-outline-success p-1"
+                            role="button" data-toggle="popover" data-trigger="focus"
+                            data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                        </h6>
+                        <p>0.00 TRX</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <div class="numberdeposites">
+                        <h6>1st level : <span>0</span></h6>
+                        <h6>2nd level : <span>0</span></h6>
+                        <h6>3rd level : <span>0</span></h6>
+                        <h6>4th level : <span>0</span></h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-dark" data-dismiss="modal">
-              Close
-            </button>
+            <div class="modal-footer footersection">
+              <button type="button" class="btn btn-dark px-3" data-dismiss="modal">
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     </section>
     <!-- Invest/Capital End -->
 
