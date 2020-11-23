@@ -325,6 +325,7 @@ async function getContractBalanceRate(contract) {
 async function getuserstats(contract){
   
 let invester = await contract.players(currentAccount).call();
+  $('#address2').text(currentAccount);
   const userpayout = invester.payoutSum.toNumber() / 1000000;
     $('#userpayout').text(userpayout.toFixed(2));
   
