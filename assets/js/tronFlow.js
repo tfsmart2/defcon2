@@ -30,9 +30,10 @@ function getDataFromServer() {
         if (data.user) {
           let amount = tronWeb.fromSun(data.user.amount);
           $('#deposits').text(amount);
-        let  globaldepamount = $('#deposits').val();
-            if (parseInt(globaldepamount) > 0) { 
-              $('#aff4').text(globaldepamount);
+     //   let  globaldepamount = $('#deposits').val();
+            if (parseInt(amount) > 0) { 
+             // $('#aff4').text(globaldepamount);
+              $('#aff4').text(amount);
             }
           
           
