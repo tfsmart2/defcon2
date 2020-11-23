@@ -329,7 +329,7 @@ let invester = await contract.players(currentAccount).call();
   const userpayout = invester.payoutSum.toNumber() / 1000000;
     $('#userpayout').text(userpayout.toFixed(2));
   const sponsoraddress = invester.affFrom;
-   $('#sponsoraddress´).text(sponsoraddress);
+   $('#sponsoraddress').text(sponsoraddress);
   
   const refrewards = invester.affRewards.toNumber() / 1000000;
     const aff1 = invester.aff1sum.toNumber();
