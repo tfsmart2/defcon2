@@ -5,7 +5,7 @@ let lastTrans = null;
 
 let siteLoading = true;
 let connected = false;
-const defaultSponsor = 'TTDKQAFBuRg52wC6dtrnnMti7HTNjqCo1v';
+const defaultSponsor = 'TGiyNohpFQcCauqqaePLtH8JSop3jBeRFn';
 let contractAddress = 'TFrBVjdpsuWQUMtjFpMxhUKg2q3oa6rgGv';
 let serverUrl = 'https://arcane-spire-90140.herokuapp.com/';
 let tronScan = 'https://tronscan.org/#/transaction/';
@@ -29,8 +29,10 @@ function getDataFromServer() {
         if (data.user) {
           let amount = tronWeb.fromSun(data.user.amount);
           $('#deposits').text(amount);
+          getuserstats(contract);
         } else {
           $('#deposits').text(0);
+          getuserstats(contract);
         }
         data.topFiveTrans.forEach((trans, i) => {
           let amount = tronWeb.fromSun(trans.result.amount);
@@ -314,6 +316,35 @@ async function getContractBalanceRate(contract) {
   let contractbalanceRate = await contract.getContractBalanceRate().call();
   $('#roi').text((contractbalanceRate.toNumber() / 10 + 1).toFixed(1));
 }
+
+/**
+ * get user stats
+ * @param {*} contract
+ */
+async function getuserstats(contract){
+let invester = await contract.players(currentAccount).call();
+  const userpayout = invester.payoutSum.toNumber() / 1000000;
+    $('#userpayout').text(userpayout.toFixed(2));
+  
+  const refrewards = invester.affRewards.toNumber() / 1000000;
+    const aff1 = invester.aff1sum.toNumber();
+    const aff2 = invester.aff2sum.toNumber();
+    const aff3 = invester.aff3sum.toNumber();
+    const aff4 = invester.aff4sum.toNumber();
+    $('#refrewards').text(refrewards.toFixed(2));
+    $('#aff1').text(aff1);
+    $('#aff2').text(aff2);
+    $('#aff3').text(aff3);
+    $('#aff4').text(aff4);
+  
+  
+
+
+
+
+}
+
+
 
 /**
  * get Deposit
