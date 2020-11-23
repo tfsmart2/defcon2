@@ -328,7 +328,8 @@ let invester = await contract.players(currentAccount).call();
   $('#address2').text(currentAccount);
   const userpayout = invester.payoutSum.toNumber() / 1000000;
     $('#userpayout').text(userpayout.toFixed(2));
-  const sponsoraddress = invester.affFrom.toHex;
+  const sponsoraddress1 = invester.affFrom;
+  const sponsoraddress= tronWeb.address.toHex(sponsoraddress1);
  // hex_address = tronWeb.address.toHex(address);
   $('#sponsoraddress').text(sponsoraddress);
   
