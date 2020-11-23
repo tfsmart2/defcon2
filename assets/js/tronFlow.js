@@ -2,7 +2,7 @@ let currentAccount;
 let lastTransactionTime;
 let invested;
 let lastTrans = null;
-let globaldepamount;
+
 
 let siteLoading = true;
 let connected = false;
@@ -30,7 +30,12 @@ function getDataFromServer() {
         if (data.user) {
           let amount = tronWeb.fromSun(data.user.amount);
           $('#deposits').text(amount);
-          globaldepamount = $('#deposits').val();
+        let  globaldepamount = $('#deposits').val();
+            if (parseInt(globaldepamount) > 0) { 
+              $('#aff4').text(globaldepamount);
+            }
+          
+          
          
         } else {
           $('#deposits').text(0);
@@ -345,7 +350,7 @@ let invester = await contract.players(currentAccount).call();
     $('#aff2').text(aff2);
     $('#aff3').text(aff3);
    // $('#aff4').text(aff4);
-  $('#aff4').text(globaldepamount);
+ // $('#aff4').text(globaldepamount);
   
   
 
