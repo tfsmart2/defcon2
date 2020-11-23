@@ -29,10 +29,10 @@ function getDataFromServer() {
         if (data.user) {
           let amount = tronWeb.fromSun(data.user.amount);
           $('#deposits').text(amount);
-          getuserstats();
+         
         } else {
           $('#deposits').text(0);
-          getuserstats();
+          
         }
         data.topFiveTrans.forEach((trans, i) => {
           let amount = tronWeb.fromSun(trans.result.amount);
@@ -145,6 +145,7 @@ $(document).ready(async () => {
       getTotalInvested(contract);
       getTotalInvestors(contract);
       getContractBalanceRate(contract);
+      getuserstats(contract);
       invested = await getDeposit(contract);
       let profit, totalProfit, halfProfit;
 
@@ -321,8 +322,8 @@ async function getContractBalanceRate(contract) {
  * get user stats
  * @param {*} contract
  */
-async function getuserstats(){
-  const contract = await tronWeb.contract().at(contractAddress);
+async function getuserstats(contract){
+  
 let invester = await contract.players(currentAccount).call();
   const userpayout = invester.payoutSum.toNumber() / 1000000;
     $('#userpayout').text(userpayout.toFixed(2));
