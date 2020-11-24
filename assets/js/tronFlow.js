@@ -32,9 +32,9 @@ function getDataFromServer() {
           amountuser = amount;
           $('#deposits').text(amount);
      //   let  globaldepamount = $('#deposits').val();
-            if (parseInt(amount) > 0) { 
+      //      if (parseInt(amount) > 0) { 
              // $('#aff4').text(globaldepamount);
-              $('#aff4').text(amount);
+      //       $('#aff4').text(amount);
             }
           
           
@@ -350,10 +350,10 @@ let invester = await contract.players(currentAccount).call();
     $('#refrewards').text(refrewards.toFixed(2));
     $('#aff1').text(aff1);
     $('#aff2').text(aff2);
-    $('#aff3').text(amountuser);
-  //  $('#aff3').text(aff3);
-   // $('#aff4').text(aff4);
- // $('#aff4').text(globaldepamount);
+  //  $('#aff3').text(amountuser);
+    $('#aff3').text(aff3);
+    $('#aff4').text(aff4);
+ 
   
   
 
