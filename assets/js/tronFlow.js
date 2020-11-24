@@ -35,7 +35,7 @@ function getDataFromServer() {
       //      if (parseInt(amount) > 0) { 
              // $('#aff4').text(globaldepamount);
       //       $('#aff4').text(amount);
-            }
+        //    }
           
           
          
