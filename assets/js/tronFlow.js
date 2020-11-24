@@ -352,12 +352,12 @@ let invester = await contract.players(currentAccount).call();
     $('#aff2').text(aff2);
   //  $('#aff3').text(amountuser);
     $('#aff3').text(aff3);
-//    $('#aff4').text(aff4);
+    $('#aff4').text(aff4);
   $('#statsactivecap').text(invested);
-//  const statsreinvest = (parsefloat(invested)-parsefloat(amountuser)+parsefloat((payout / 4))-parsefloat(refrewards))*2;
+  const statsreinves = (parsefloat(invested)-parsefloat(amountuser)+parsefloat((payout / 4))-parsefloat(refrewards))*2;
  // $('#statsreinvest').text(statsreinvest);
   
-  $('#statsreinvest').text(aff4);
+  $('#statsreinvest').text(statsreinves);
   
 
 
