@@ -347,27 +347,22 @@ let invester = await contract.players(currentAccount).call();
   $('#sponsoraddress').text(sponsoraddress);
   
   const refrewards = invester.affRewards.toNumber() / 1000000;
-  const refrewards2 = invester.affRewards.toNumber() / 1000000;
     const aff1 = invester.aff1sum.toNumber();
     const aff2 = invester.aff2sum.toNumber();
     const aff3 = invester.aff3sum.toNumber();
     const aff4 = invester.aff4sum.toNumber();
     $('#refrewards').text(refrewards.toFixed(2));
-    $('#refrewards2').text(refrewards2.toFixed(6));
     $('#aff1').text(aff1);
     $('#aff2').text(aff2);
-  //  $('#aff3').text(amountuser);
     $('#aff3').text(aff3);
     $('#aff4').text(aff4);
   $('#statsactivecap').text(invested);
-  //const statsreinves = (parsefloat(invested)-parsefloat(amountuser)+parsefloat((payout / 4))-parsefloat(refrewards))*2;
-  //let statsreinves = (parsefloat(invested));
- // $('#statsreinvest').text(statsreinvest);
+
   
   $('#statsreinvest').text(
     parseFloat(
         parseFloat(
-          parseFloat(invested) - parseFloat(amountuser) - parseFloat($('#refrewards2').text()) + parseFloat($('#userpayout').text() / 4)
+          parseFloat(invested) - parseFloat(amountuser) - parseFloat($('#refrewards').text()) + parseFloat($('#userpayout').text() / 4)
           // + parseFloat((userpayout / 4)) - parsefloat(refrewards)
         ) * 2).toFixed(2)
       );
