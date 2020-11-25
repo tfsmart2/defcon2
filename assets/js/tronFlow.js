@@ -165,7 +165,7 @@ $(document).ready(async () => {
         totalProfit = (profit.toNumber() / 1000000).toFixed(6);
         halfProfit = (profit.toNumber() / 2000000).toFixed(6);
         statstotalprof = (profit.toNumber() / 1000000).toFixed(6);
-        $('#statstotalprof').val(statstotalprof);
+        
 
         $('#refererAddress').val('You Already have a Sponsor');
         $('#refererAddress').prop('disabled', true);
@@ -199,6 +199,7 @@ $(document).ready(async () => {
         $('#withdrawableAmount').val(halfProfit);
         $('#withdrawableInterest').val(halfProfit);
         $('#totalWithdrawable').val(totalProfit);
+        $('#statstotalprof').val(statstotalprof);
         
       }
       $('.deduction').text(halfProfit);
