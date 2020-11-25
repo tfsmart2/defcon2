@@ -387,6 +387,13 @@ let invester = await contract.players(currentAccount).call();
       parseFloat($('#statsreinvest').text()) + parseFloat($('#userpayout').text())
       )
     );
+  
+  $('#statscigenerated').text(
+    parseFloat(
+        parseFloat($('#statsreinvest').text()) + parseFloat($('#userpayout').text()) + parseFloat(statstotalprof)
+        ).toFixed(2)
+      );
+  
   $('#statstotaldouble').text(
     parseFloat(
         parseFloat(
