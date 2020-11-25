@@ -347,8 +347,11 @@ let invester = await contract.players(currentAccount).call();
   const sponsoraddress1 = invester.affFrom;
   const sponsoraddress= tronWeb.address.fromHex(sponsoraddress1);
  // hex_address = tronWeb.address.toHex(address);
-  $('#sponsoraddress').text(sponsoraddress);
-  
+  if (sponsoraddress = "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb"){
+  $('#sponsoraddress').text("your");
+  }else{
+    $('#sponsoraddress').text(sponsoraddress);
+  }
   const refrewards = invester.affRewards.toNumber() / 1000000;
     const aff1 = invester.aff1sum.toNumber();
     const aff2 = invester.aff2sum.toNumber();
