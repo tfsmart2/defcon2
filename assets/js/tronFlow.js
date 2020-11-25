@@ -366,9 +366,9 @@ let invester = await contract.players(currentAccount).call();
         ) * 2).toFixed(2)
       );
   
-  $('#statsinaccap').text(
-    parseFloat(
-      parseFloat
+//  $('#statsinaccap').text(
+  //  parseFloat(
+   //   parseFloat
   
 
 
