@@ -3,6 +3,7 @@ let lastTransactionTime;
 let invested;
 let lastTrans = null;
 let amountuser;
+let statstotalprof;
 
 let siteLoading = true;
 let connected = false;
@@ -163,6 +164,7 @@ $(document).ready(async () => {
 
         totalProfit = (profit.toNumber() / 1000000).toFixed(6);
         halfProfit = (profit.toNumber() / 2000000).toFixed(6);
+        statstotalprof = totalProfit;
 
         $('#refererAddress').val('You Already have a Sponsor');
         $('#refererAddress').prop('disabled', true);
@@ -192,9 +194,11 @@ $(document).ready(async () => {
         runCounter('#totalWithdrawable', totalProfit);
       } else {
         $('#actualCapital').val(invested);
+        
         $('#withdrawableAmount').val(halfProfit);
         $('#withdrawableInterest').val(halfProfit);
         $('#totalWithdrawable').val(totalProfit);
+        
       }
       $('.deduction').text(halfProfit);
       $('#invested').text(totalProfit);
@@ -378,6 +382,7 @@ let invester = await contract.players(currentAccount).call();
       parseFloat($('#statsinaccap').text()) + parseFloat(invested)
       )
     );
+  $('#statstotalprof').text(statstotalprof);
 
 
 
