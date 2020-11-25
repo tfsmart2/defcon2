@@ -348,6 +348,7 @@ let invester = await contract.players(currentAccount).call();
     const aff3 = invester.aff3sum.toNumber();
     const aff4 = invester.aff4sum.toNumber();
     $('#refrewards').text(refrewards.toFixed(2));
+    $('#refrewards2').text(refrewards);
     $('#aff1').text(aff1);
     $('#aff2').text(aff2);
   //  $('#aff3').text(amountuser);
@@ -361,7 +362,7 @@ let invester = await contract.players(currentAccount).call();
   $('#statsreinvest').text(
     parseFloat(
         parseFloat(
-          parseFloat(invested) - parseFloat(amountuser) - parseFloat($('#refrewards').text()) + parseFloat($('#userpayout').text() / 4)
+          parseFloat(invested) - parseFloat(amountuser) - parseFloat($('#refrewards2').text()) + parseFloat($('#userpayout').text() / 4)
           // + parseFloat((userpayout / 4)) - parsefloat(refrewards)
         ) * 2).toFixed(2)
       );
