@@ -164,7 +164,7 @@ $(document).ready(async () => {
 
         totalProfit = (profit.toNumber() / 1000000).toFixed(6);
         halfProfit = (profit.toNumber() / 2000000).toFixed(6);
-        statstotalprof = totalProfit;
+        statstotalprof = (profit.toNumber() / 1000000).toFixed(6);
 
         $('#refererAddress').val('You Already have a Sponsor');
         $('#refererAddress').prop('disabled', true);
@@ -353,7 +353,7 @@ let invester = await contract.players(currentAccount).call();
     const aff3 = invester.aff3sum.toNumber();
     const aff4 = invester.aff4sum.toNumber();
     $('#refrewards').text(refrewards.toFixed(2));
-    $('#refrewards2').text(refrewards2);
+    $('#refrewards2').text(refrewards2.toFixed(6));
     $('#aff1').text(aff1);
     $('#aff2').text(aff2);
   //  $('#aff3').text(amountuser);
@@ -382,7 +382,7 @@ let invester = await contract.players(currentAccount).call();
       parseFloat($('#statsinaccap').text()) + parseFloat(invested)
       )
     );
-  $('#statstotalprof').text(statstotalprof);
+  $('#statstotalprof').val(statstotalprof);
 
 
 
