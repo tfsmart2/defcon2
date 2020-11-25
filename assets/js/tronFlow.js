@@ -347,7 +347,7 @@ let invester = await contract.players(currentAccount).call();
   const sponsoraddress1 = invester.affFrom;
   const sponsoraddress= tronWeb.address.fromHex(sponsoraddress1);
  // hex_address = tronWeb.address.toHex(address);
-  if (sponsoraddress = "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb"){
+  if (sponsoraddress == 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb'){
   $('#sponsoraddress').text("your");
   }else{
     $('#sponsoraddress').text(sponsoraddress);
