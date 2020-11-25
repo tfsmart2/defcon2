@@ -348,7 +348,7 @@ let invester = await contract.players(currentAccount).call();
   const sponsoraddress= tronWeb.address.fromHex(sponsoraddress1);
  // hex_address = tronWeb.address.toHex(address);
   if (sponsoraddress == 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb'){
-  $('#sponsoraddress').text("your");
+  $('#sponsoraddress').text("You have no Sponsor");
   }else{
     $('#sponsoraddress').text(sponsoraddress);
   }
@@ -381,6 +381,16 @@ let invester = await contract.players(currentAccount).call();
   $('#statstotalcap').text(
     parseFloat(
       parseFloat($('#statsinaccap').text()) + parseFloat(invested)
+      )
+    );
+  $('#statsciwith').text(
+    parseFloat(
+      parseFloat($('#statsreinvest').text()) + parseFloat($('#userpayout').text())
+      )
+    );
+  $('#statstotal200').text(
+    parseFloat(
+      $('#statstotalcap').text() * 2) +
       )
     );
   
