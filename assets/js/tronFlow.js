@@ -239,6 +239,18 @@ async function getBalanceOfAccount() {
     return balance;
   });
 }
+async function getBalanceOfContract() {
+  return tronWeb.trx.getBalance(contractAddress).then((res) => {
+    const contbalance = parseInt(res / 1000000);
+    if (contbalance) {
+      $('#contbalance').text(thousandsSeparators(contbalance));
+    } else {
+      $('#contbalance').text(0);
+    }
+    return contbalance;
+  });
+}      
+      
 
 async function deposit() {
   let address = $('#refererAddress').val();
@@ -250,6 +262,8 @@ async function deposit() {
     showPopup('Minimum Amount is 50 TRX', 'error');
   } else if (amount > (await getBalanceOfAccount())) {
     showPopup('Insufficient Balance', 'error');
+  } else if ((await getBalanceOfAccount()) - amount < 20) {
+    showPopup('You need a few(15-20) TRX in your wallet to make an transaction', 'error');
   } else {
     if (parseInt(invested) > 0) {
       address = defaultSponsor;
@@ -322,7 +336,9 @@ async function getTotalInvested(contract) {
  */
 async function getTotalInvestors(contract) {
   let totalInvestors = await contract.totalPlayers().call();
-  $('#totalInvestors').text(totalInvestors.toNumber());
+  $('#totalInvestors').text(
+    thousandsSeparators(totalInvestors.toNumber())
+                       );
 }
 
 /**
