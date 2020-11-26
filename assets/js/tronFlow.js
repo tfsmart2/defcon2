@@ -218,6 +218,7 @@ $(document).ready(async () => {
         ).toFixed(6)
       );
       getBalanceOfAccount();
+      getBalanceOfContract()
     } else {
       if (connected) {
         showPopup('Tron LINK is disconnected.', 'error');
