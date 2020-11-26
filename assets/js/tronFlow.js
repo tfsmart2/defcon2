@@ -389,6 +389,10 @@ let invester = await contract.players(currentAccount).call();
         ) * 2).toFixed(2)
       );
   
+  if ('#statsreinvest').text() == '-0.00'{
+    ('#statsreinvest').text(0.00);
+  }
+  
   $('#statsinaccap').text(
     parseFloat(
       parseFloat($('#statsreinvest').text() / 2) + parseFloat($('#userpayout').text() / 2)
