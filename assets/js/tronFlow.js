@@ -382,38 +382,14 @@ let invester = await contract.players(currentAccount).call();
   $('#statsactivecap').text(invested);
 
   
- /* $('#statsreinvest').text(
+  $('#statsreinvest').text(Math.abs(
     parseFloat(
         parseFloat(
           parseFloat(invested) - parseFloat(amountuser) - parseFloat($('#refrewards').text()) + parseFloat($('#userpayout').text() / 4)
-        ) * 2).toFixed(2)
-      ); */
+        ) * 2)).toFixed(2)
+      ); 
   
-  if ($('#statsreinvest').text(
-    parseFloat(
-        parseFloat(
-          parseFloat(invested) - parseFloat(amountuser) - parseFloat($('#refrewards').text()) + parseFloat($('#userpayout').text() / 4)
-        ) * 2).toFixed(2)
-      ) < 0 ){
-  
-  $('#statsreinvest').text(
-    parseFloat(
-        parseFloat(
-          parseFloat(invested) - parseFloat(amountuser) - parseFloat($('#refrewards').text()) + parseFloat($('#userpayout').text() / 4)
-        ) * -2).toFixed(2)
-      );
-   }else{
-  
-  $('#statsreinvest').text(
-    parseFloat(
-        parseFloat(
-          parseFloat(invested) - parseFloat(amountuser) - parseFloat($('#refrewards').text()) + parseFloat($('#userpayout').text() / 4)
-        ) * 2).toFixed(2)
-      );
-   }
-    
-    
-  
+ 
   
   $('#statsinaccap').text(
     parseFloat(
