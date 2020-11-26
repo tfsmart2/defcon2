@@ -390,7 +390,7 @@ let invester = await contract.players(currentAccount).call();
       );
   
   if (('#statsreinvest').text() == '-0.00'){
-    ('#statsreinvest').text(0.00);
+    ('#statsreinvest').text("0.00");
   }
   
   $('#statsinaccap').text(
