@@ -195,7 +195,7 @@ $(document).ready(async () => {
         runCounter('#withdrawableInterest', halfProfit);
         runCounter('#totalWithdrawable', totalProfit);
       } else {
-        $('#actualCapital').val(invested);
+        $('#actualCapital').val(thousandsSeparators((invested));
         
         $('#withdrawableAmount').val(halfProfit);
         $('#withdrawableInterest').val(halfProfit);
