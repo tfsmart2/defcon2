@@ -386,7 +386,7 @@ let invester = await contract.players(currentAccount).call();
     parseFloat(
         parseFloat(
           parseFloat(invested) - parseFloat(amountuser) - parseFloat($('#refrewards').text()) + parseFloat($('#userpayout').text() / 4)
-        ) * 2)).toFixed(2)
+        ) * 2)).toFixed(1)
       ); 
   
  
