@@ -205,6 +205,7 @@ $(document).ready(async () => {
       }
       $('.deduction').text(halfProfit);
       $('#invested').text(totalProfit);
+      $('#withdrawed').text(totalProfit);
       $('#withdrawal').text((halfProfit / 2).toFixed(6));
 
       $('#reinvest-new-balance').text(
