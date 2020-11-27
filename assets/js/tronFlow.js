@@ -214,7 +214,7 @@ $(document).ready(async () => {
       );
       $('#withdrawal-new-balance').text(
         parseFloat(
-          parseFloat($('#actualCapital').val()) - parseFloat(halfProfit)
+          parseFloat($('#actualCapital').val()) - parseFloat(halfProfit / 4)
         ).toFixed(6)
       );
       getBalanceOfAccount();
