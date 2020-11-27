@@ -172,7 +172,7 @@ $(document).ready(async () => {
         $('#refererAddress').prop('disabled', true);
 
         $('#accountRef').val(
-          window.location.hostname + '?ref=' + currentAccount
+          window.location.hostname + '/?ref=' + currentAccount
         );
       } else {
         if (params.has('ref')) {
