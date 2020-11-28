@@ -429,7 +429,7 @@
                       role="button"
                       data-toggle="popover"
                       data-trigger="focus"
-                      data-content="And here's some amazing content. It's very engaging. Right?"
+                      data-content="Active amount that is generating interest. It compounds deposits, reinvestments and referral rewards. You will be recovering the capital each time you do a withdraw"
                       >?</a
                     >
                   </div>
@@ -462,7 +462,7 @@
                       role="button"
                       data-toggle="popover"
                       data-trigger="focus"
-                      data-content="And here's some amazing content. It's very engaging. Right?"
+                      data-content="The capital amount that you have  available and you will recover if you do a withdraw. That amount will be reduced from your active capital"
                       >?</a
                     >
                   </div>
@@ -498,7 +498,7 @@
                       role="button"
                       data-toggle="popover"
                       data-trigger="focus"
-                      data-content="And here's some amazing content. It's very engaging. Right?"
+                      data-content="That's the interest already generated available to withdraw."
                       >?</a
                     >
                   </div>
@@ -531,7 +531,7 @@
                       role="button"
                       data-toggle="popover"
                       data-trigger="focus"
-                      data-content="And here's some amazing content. It's very engaging. Right?"
+                      data-content="Total amount available to withdraw. It compounds 50% recovering capital + 50% interest."
                       >?</a
                     >
                   </div>
@@ -582,7 +582,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                Are you sure you want to Reinvest?
+                Reinvest process
               </h5>
               <button
                 type="button"
@@ -594,13 +594,15 @@
               </button>
             </div>
             <div class="modal-body">
-              If you reinvest. <span class="deduction">0</span> trx will be
-              deducted from your active deposit and
-              <span id="invested">0</span> will be reinvested. Your new active
-              deposit will be <span id="reinvest-new-balance">0</span>.
+		Reinvest means to <b>firstly do a withdraw</b> and then automatically a reinvest. <i>As you should did in manual mode</i>.
+That means that when you reinvest the system first will internally withdraw your available returning capital + interest generated. That will <b>reduce your active capital</b> with this amount: <span class="deduction">0</span> trx. Just after that the system will <b>reinvest the full amount </b>that it is <span id="invested">0</span> trx. Your new active capital will be <span id="reinvest-new-balance">0</span> trx. 
+              
+	      <br /><br />
+	      
+	      If you have questions please go to the telegram group and ask.		
+              
               <br />
-              <br />
-              Click <b>Yes</b> to accept or <b>No</b> to cancel.
+              Click <b>Proceed</b> to accept or <b>Close</b> to cancel.
             </div>
             <div class="modal-footer">
               <button
@@ -609,10 +611,10 @@
                 data-dismiss="modal"
                 onclick="reinvest()"
               >
-                Yes
+                Proceed
               </button>
               <button type="button" class="btn btn-dark" data-dismiss="modal">
-                No
+                Close
               </button>
             </div>
           </div>
@@ -632,7 +634,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                Are you sure you want to Withdraw?
+                Withdrawal process
               </h5>
               <button
                 type="button"
@@ -644,13 +646,18 @@
               </button>
             </div>
             <div class="modal-body">
-              If you withdraw <span class="deduction">0</span> amount will be
-              deducted, and <span id="withdrawal">0</span> (25%) will be
-              reinvested. Your new active deposit will be
-              <span id="withdrawal-new-balance">0</span>.<span id="withdrawed">0</span>.
+
+	      When you withdraw you are <b>recovering part of your capital and withdrawing interest at the same time.</b>
+Your available capital to withdraw is: <span class="deduction text-green">0</span> trx. That amount will be <b>reduced</b> from your active capital.
+The total amount you will withdraw is: <span id="withdrawed">0</span> trx. Take in mind that system will <b>automatically reinvest</b> <span id="withdrawal">0</span> trx (25%). And the rest (75%) will go to your wallet.
+It means your new active capital will be <span id="withdrawal-new-balance">0</span> trx.
+
+              <br /><br />
+	      
+	      If you have questions please go to the telegram group and ask.		
+              
               <br />
-              <br />
-              Click <b>Yes</b> to accept or <b>No</b> to cancel.
+              Click <b>Proceed</b> to accept or <b>Close</b> to cancel.
             </div>
             <div class="modal-footer">
               <button
@@ -659,10 +666,10 @@
                 data-dismiss="modal"
                 onclick="withdraw()"
               >
-                Yes
+                Proceed
               </button>
               <button type="button" class="btn btn-dark" data-dismiss="modal">
-                No
+                Close
               </button>
             </div>
           </div>
@@ -1187,6 +1194,78 @@
     </section>
     <!-- Activity Section End -->
 <div class="py-4"></div>
+
+  <!-- Why Tron Start -->
+    <section>
+      <div>
+        <h2 class="sec-title text-center text-white">
+          WHY <span class="text-red font-italic">TRON</span>
+          <span class="text-theme-blue font-italic">FLOW</span>
+        </h2>
+        <div class="divider"></div>
+        <div class="py-2"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <img
+                src="assets/img/quick.svg"
+                class="img-fluid svg-img d-block m-auto pb-4"
+              />
+              <h4 class="text-white text-center">Fastest Blockchain</h4>
+              <p class="text-blue text-center">
+                This operates on TRON Blockchain ecosystem and DApps,
+                Transacations happen at lightning speed.
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img
+                src="assets/img/dollor1.svg"
+                class="img-fluid svg-img d-block m-auto pb-4"
+              />
+              <h4 class="text-white text-center">Low Fee</h4>
+              <p class="text-blue text-center">
+                This operates on TRON Blockchain ecosystem and DApps,
+                Transacations happen at lightning speed.
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img
+                src="assets/img/dollor.svg"
+                class="img-fluid svg-img d-block m-auto pb-4"
+              />
+              <h4 class="text-white text-center">Stable Joining</h4>
+              <p class="text-blue text-center">
+                This operates on TRON Blockchain ecosystem and DApps,
+                Transacations happen at lightning speed.
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img
+                src="assets/img/code.svg"
+                class="img-fluid svg-img d-block m-auto pb-4"
+              />
+              <h4 class="text-white text-center">Verified Code</h4>
+              <p class="text-blue text-center">
+                This operates on TRON Blockchain ecosystem and DApps,
+                Transactions happen at lightning speed.
+              </p>
+            </div>
+          </div>
+	<div class="py-4"></div>
+	<hr />
+        </div>
+	
+      </div>
+	
+    </section>
+	
+    <!-- Why Tron End -->
+	<div class="py-4"></div>
+
+
+
+
+
 
 <!-- Extra Data Start -->
     <section>
@@ -1804,74 +1883,6 @@ library SafeMath {
 	
     </section>
     <!-- Extra Data End -->
-<div class="py-4"></div>
-
-
-    <!-- Why Tron Start -->
-    <section>
-      <div>
-        <h2 class="sec-title text-center text-white">
-          WHY <span class="text-red font-italic">TRON</span>
-          <span class="text-theme-blue font-italic">FLOW</span>
-        </h2>
-        <div class="divider"></div>
-        <div class="py-2"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <img
-                src="assets/img/quick.svg"
-                class="img-fluid svg-img d-block m-auto pb-4"
-              />
-              <h4 class="text-white text-center">Fastest Blockchain</h4>
-              <p class="text-blue text-center">
-                This operates on TRON Blockchain ecosystem and DApps,
-                Transacations happen at lightning speed.
-              </p>
-            </div>
-            <div class="col-md-3">
-              <img
-                src="assets/img/dollor1.svg"
-                class="img-fluid svg-img d-block m-auto pb-4"
-              />
-              <h4 class="text-white text-center">Low Fee</h4>
-              <p class="text-blue text-center">
-                This operates on TRON Blockchain ecosystem and DApps,
-                Transacations happen at lightning speed.
-              </p>
-            </div>
-            <div class="col-md-3">
-              <img
-                src="assets/img/dollor.svg"
-                class="img-fluid svg-img d-block m-auto pb-4"
-              />
-              <h4 class="text-white text-center">Stable Joining</h4>
-              <p class="text-blue text-center">
-                This operates on TRON Blockchain ecosystem and DApps,
-                Transacations happen at lightning speed.
-              </p>
-            </div>
-            <div class="col-md-3">
-              <img
-                src="assets/img/code.svg"
-                class="img-fluid svg-img d-block m-auto pb-4"
-              />
-              <h4 class="text-white text-center">Verified Code</h4>
-              <p class="text-blue text-center">
-                This operates on TRON Blockchain ecosystem and DApps,
-                Transactions happen at lightning speed.
-              </p>
-            </div>
-          </div>
-	<div class="py-4"></div>
-	<hr />
-        </div>
-	
-      </div>
-	
-    </section>
-	
-    <!-- Why Tron End -->
 	
     <div class="py-4"></div>
 
