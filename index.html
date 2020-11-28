@@ -43,7 +43,7 @@
           <nav class="navbar navbar-expand-lg navbar-dark">
             <a
               class="navbar-brand"
-              href="https://tfbuildsmart.github.io/tronflow/index.html"
+              href="#"
             >
               <img
                 src="assets/img/Logo.png"
@@ -229,7 +229,7 @@
         <div class="row">
           <div class="col-6">
             <h1 id="totalInvested" class="text-red text-center sm-value">0</h1>
-            <p class="text-center text-blue">Invested <span style="color:blue; font-weight:bold">TRX</span></p>
+            <p class="text-center text-blue">Invested TRX</p>
 		  
           </div>
           <div class="col-6">
@@ -240,11 +240,11 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <h1 class="text-theme-blue text-center lg-value">
-              <span id="roi">0.0</span>%
+            <h1 class="text-theme-blue text-center  lg-value">
+              <span id="roi" style="color:blue; font-weight:bold;font-size:150% ">0.0</span><span style="color:blue; font-weight:bold">%</span>
 	
             </h1>
-            <p class="text-center text-blue">Actual ROI/<span style="color:blue; font-weight:bold">Day</span>
+            <p class="text-center text-blue">Actual ROI/Day
 		<br />
 		+0.1% for every million TRX in the smart contract balance, Max 5%
 
@@ -595,10 +595,10 @@
             </div>
             <div class="modal-body">
 		Reinvest means to <b>firstly do a withdraw</b> and then automatically a reinvest. <i>As you should did in manual mode</i>.
-That means that when you reinvest the system first will internally withdraw your available returning capital + interest generated. That will <b>reduce your active capital</b> with this amount: <span class="deduction">0</span> trx. Just after that the system will <b>reinvest the full amount </b>that it is <span id="invested">0</span> trx. Your new active capital will be <span id="reinvest-new-balance">0</span> trx. 
+That means that when you reinvest the system first will internally withdraw your available returning capital + interest generated. That will <b>reduce your active capital</b> with this amount: <span class="deduction text-green">0</span><span style="color:green"> trx</span>. Just after that the system will <b>reinvest the full amount </b>that it is <span id="invested" class="text-green">0</span><span style="color:green"> trx</span>. Your new active capital will be <span id="reinvest-new-balance" class="text-green">0</span><span style="color:green"> trx</span>. 
               
 	      <br /><br />
-	      
+	      <i>Yo will need a variable(8-20)trx to pay blockchain transaction fee.</i>
 	      If you have questions please go to the telegram group and ask.		
               
               <br />
@@ -648,12 +648,12 @@ That means that when you reinvest the system first will internally withdraw your
             <div class="modal-body">
 
 	      When you withdraw you are <b>recovering part of your capital and withdrawing interest at the same time.</b>
-Your available capital to withdraw is: <span class="deduction text-green">0</span> trx. That amount will be <b>reduced</b> from your active capital.
-The total amount you will withdraw is: <span id="withdrawed">0</span> trx. Take in mind that system will <b>automatically reinvest</b> <span id="withdrawal">0</span> trx (25%). And the rest (75%) will go to your wallet.
-It means your new active capital will be <span id="withdrawal-new-balance">0</span> trx.
+Your available capital to withdraw is: <span class="deduction text-green">0</span><span style="color:green"> trx</span>. That amount will be <b>reduced</b> from your active capital.
+The total amount you will withdraw is: <span id="withdrawed" class="text-green">0</span><span style="color:green"> trx</span>. Take in mind that system will <b>automatically reinvest</b> <span id="withdrawal" class="text-green">0</span><span style="color:green"> trx</span> (25%). And the rest (75%) will go to your wallet.
+It means your new active capital will be <span id="withdrawal-new-balance" class="text-green">0</span><span style="color:green"> trx</span>.
 
               <br /><br />
-	      
+	      <i>Yo will need a variable(8-20)trx to pay blockchain transaction fee.</i>
 	      If you have questions please go to the telegram group and ask.		
               
               <br />
@@ -709,25 +709,27 @@ It means your new active capital will be <span id="withdrawal-new-balance">0</sp
               </div>
             </div>
             <div class="dashed-border"></div>
+		<div style="text-align:center; color:green; font-weight:bold"> &#9757;Some data takes about 30sec to load or refresh&#9757;  </div>
+		<div class="dashed-border"></div>
             <div class="row">
               <div class="col-md-6 bm-right text-center">
                 <div class="boxcontain">
                   <h5 class="h5basictitle01 text-center ">Capital</h5>
                   <h6>Active Capital <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
                       data-toggle="popover" data-trigger="focus"
-                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                      data-content="Active amount that is generating interest. It compounds deposits, reinvestments and referral rewards. You will be recovering this capital each time you do a withdraw">?</a>
                   </h6>
-			<p><span id="statsactivecap">0.00</span> TRX</p>
+			<p><span id="statsactivecap" class="text-green">0.00</span><span class="text-green"> TRX</span></p>
                   <h6>Inactive Capital <a tabindex="2" class="btn d-inline btn-outline-success p-1" role="button"
                       data-toggle="popover" data-trigger="focus"
-                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                      data-content="Capital amount that you already recovered from withdrawing or reinvesting. Remember that if you reinvest firstly there is a withdrawal process.">?</a>
                   </h6>
-                  <p><span id="statsinaccap">0.00</span> TRX</p>
+                  <p><span id="statsinaccap" class="text-green">0.00</span><span class="text-green"> TRX</span></p>
                   <h6>Total Capital<a tabindex="3" class="btn d-inline btn-outline-success p-1" role="button"
                       data-toggle="popover" data-trigger="focus"
-                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                      data-content="Total Capital consisting of the sum of the active and inactive">?</a>
                   </h6>
-                  <p><span id="statstotalcap">0.00</span> TRX</p>
+                  <p><span id="statstotalcap" class="text-green">0.00</span><span class="text-green"> TRX</span></p>
                 </div>
               </div>
               <div class="col-md-6 text-center">
@@ -735,20 +737,23 @@ It means your new active capital will be <span id="withdrawal-new-balance">0</sp
                   <h5 class="h5basictitle01 text-center">Capital + Interest (C+I)</h5>
                   <h6>C+I Available <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
                       data-toggle="popover" data-trigger="focus"
-                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                      data-content="Capital + Interest amount available to withdraw">?</a>
                   </h6>
-			<p><span id="statstotalprof">0.00</span> TRX</p>
+			<p><span id="statstotalprof" class="text-green">0.00</span><span class="text-green"> TRX</span></p>
                   <h6>C+I Withdrawn <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
                       data-toggle="popover" data-trigger="focus"
-                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                      data-content="Capital + Interest amount that you already withdrawn. Remember that if you reinvest firstly there is a withdrawal process.">?</a>
                   </h6>
-			<p><span id="statsciwith">0.00</span> TRX</p>
-                  <h6>Total C+I Generated</h6><h6>/</h6><h6> Total C+I at 200% <a tabindex="1"
+			<p><span id="statsciwith" class="text-green">0.00</span><span class="text-green"> TRX</span></p>
+                  <h6>Total C+I Generated<a tabindex="1"
                       class="btn d-inline btn-outline-success p-1" role="button" data-toggle="popover"
                       data-trigger="focus"
-                      data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                      data-content="Total Capital + Interest already generated. That sums the available with the already withdrawed. Remember that if you reinvest firstly there is a withdrawal process.">?</a></h6><h6>/</h6><h6> Total C+I at 200% <a tabindex="1"
+                      class="btn d-inline btn-outline-success p-1" role="button" data-toggle="popover"
+                      data-trigger="focus"
+                      data-content="Total amount that will be generated at 200%. Once you reach that amount,  the system won't generate more profit until you do a new deposit, reinvest or withdraw">?</a>
                   </h6>
-			<p><span id="statscigenerated">0.00</span> TRX/<span id="statstotaldouble">0.00</span> TRX</p> 
+			<p><span id="statscigenerated" class="text-green">0.00</span><span class="text-green"> TRX /&nbsp </span><span id="statstotaldouble" class="text-green">0.00</span><span class="text-green"> TRX</span></p> 
                 </div>
               </div>
             </div>
@@ -763,18 +768,18 @@ It means your new active capital will be <span id="withdrawal-new-balance">0</sp
                       <div class="totaldeposites"> 
                         <h6>Total Invested <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
                             data-toggle="popover" data-trigger="focus"
-                            data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                            data-content="Total amount of external deposits done">?</a>
                         </h6>
-                        <p><span id="deposits">0.00</span> TRX</p>
+                        <p><span id="deposits" class="text-green">0.00</span><span class="text-green"> TRX</span></p>
                       </div>
                     </div>
 			<div class="col-lg-4 col-md-4 col-sm-12 t">
                       <div class="totaldeposites"> 
                         <h6>Total Reinvested <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
                             data-toggle="popover" data-trigger="focus"
-                            data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                            data-content="Total amount reinvested">?</a>
                         </h6>
-                        <p><span id="statsreinvest">0.00</span> TRX</p>
+                        <p><span id="statsreinvest" class="text-green">0.00</span><span class="text-green"> TRX</span></p>
                       </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12">
@@ -782,9 +787,9 @@ It means your new active capital will be <span id="withdrawal-new-balance">0</sp
 			
                         <h6>Total Payout <a tabindex="1" class="btn d-inline btn-outline-success p-1" role="button"
                             data-toggle="popover" data-trigger="focus"
-                            data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                            data-content="Total amount withdrawed. Remember that 25% of that amount was automatically reinvested">?</a>
                         </h6>
-                        <p><span id="userpayout">0.00</span> TRX</p>
+                        <p><span id="userpayout" class="text-green">0.00</span><span class="text-green"> TRX</span></p>
                       </div>
                     </div>
                  </div> 
@@ -801,9 +806,9 @@ It means your new active capital will be <span id="withdrawal-new-balance">0</sp
                       <div class="referraltext">
                         <h6> Referral Commission <a tabindex="1" class="btn d-inline btn-outline-success p-1"
                             role="button" data-toggle="popover" data-trigger="focus"
-                            data-content="And here's some amazing content. It's very engaging. Right?">?</a>
+                            data-content="Total Referral commission earned. Remember that Referral commission will be added to your Active capital">?</a>
                         </h6>
-                        <p><span id="refrewards">0.00</span> TRX</p>
+                        <p><span id="refrewards" class="text-green">0.00</span><span class="text-green"> TRX</span></p>
                       </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
@@ -1016,8 +1021,15 @@ It means your new active capital will be <span id="withdrawal-new-balance">0</sp
           </div>
           <div class="col-md-4 mb-4">
 		<h4 class="text-white">How it works</h4>
+		<div class="text-blue">Daily TOP 3 deposits will earn a prize:</div>
+		<div class="text-blue"style="font-weight:bold">--&#9889;TOP 1: 7% of his deposit&#9889;--</div>
+		<div class="text-blue"style="font-weight:bold">--&#9889;TOP 2: 5% of his deposit&#9889;--</div>
+		<div class="text-blue"style="font-weight:bold">--&#9889;TOP 3: 3% of his deposit&#9889;--</div>
+		<div class="text-blue"style="font-style:italic">Important: In case of tie, it'll win the first one that made the deposit. Prize will be manually send the day after</div>
+		<br/>
+		<div class="text-blue"style= "text-align:center">Daily Countdown:</div>
 		<div>
-              <ul id="timer">
+              <ul id="timer" style= "text-align:center">
                 <li>
                   <span class="hours">00</span>
                   
@@ -1033,6 +1045,32 @@ It means your new active capital will be <span id="withdrawal-new-balance">0</sp
                   
                 </li>
               </ul>
+		<p class="text-blue text-center my-2">
+                <span style="color: red"
+                  ><span
+                    role="img"
+                    aria-label="check-circle"
+                    class="anticon anticon-check-circle"
+                    ><svg
+                      viewBox="64 64 896 896"
+                      focusable="false"
+                      class=""
+                      data-icon="check-circle"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M699 353h-46.9c-10.2 0-19.9 4.9-25.9 13.3L469 584.3l-71.2-98.8c-6-8.3-15.6-13.3-25.9-13.3H325c-6.5 0-10.3 7.4-6.5 12.7l124.6 172.8a31.8 31.8 0 0051.7 0l210.6-292c3.9-5.3.1-12.7-6.4-12.7z"
+                      ></path>
+                      <path
+                        d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                      ></path></svg></span
+                ></span>
+                If countdown freezes or marks 0 please refresh.
+              </p>
+		
             </div>
           </div>
           <div class="col-md-4 mb-4">
@@ -1208,13 +1246,12 @@ It means your new active capital will be <span id="withdrawal-new-balance">0</sp
           <div class="row">
             <div class="col-md-3">
               <img
-                src="assets/img/quick.svg"
+                src="assets/img/scale.png"
                 class="img-fluid svg-img d-block m-auto pb-4"
               />
-              <h4 class="text-white text-center">Fastest Blockchain</h4>
+              <h4 class="text-white text-center">1-5% variable ROI</h4>
               <p class="text-blue text-center">
-                This operates on TRON Blockchain ecosystem and DApps,
-                Transacations happen at lightning speed.
+                ROI will vary depending of the Smart Contract's balance. From a 1% base  until a 5% max.
               </p>
             </div>
             <div class="col-md-3">
@@ -1222,21 +1259,21 @@ It means your new active capital will be <span id="withdrawal-new-balance">0</sp
                 src="assets/img/dollor1.svg"
                 class="img-fluid svg-img d-block m-auto pb-4"
               />
-              <h4 class="text-white text-center">Low Fee</h4>
+              <h4 class="text-white text-center">Double your Funds</h4>
               <p class="text-blue text-center">
-                This operates on TRON Blockchain ecosystem and DApps,
-                Transacations happen at lightning speed.
+                Get +100% interest from your active capital. You will recover your active capital while earning interest.
               </p>
             </div>
             <div class="col-md-3">
               <img
-                src="assets/img/dollor.svg"
+                src="assets/img/group.png"
                 class="img-fluid svg-img d-block m-auto pb-4"
               />
-              <h4 class="text-white text-center">Stable Joining</h4>
+              <h4 class="text-white text-center">4 Referral Levels</h4>
               <p class="text-blue text-center">
-                This operates on TRON Blockchain ecosystem and DApps,
-                Transacations happen at lightning speed.
+                10% comission will be shared in 4 levels of referrals.
+		Referral comissions will increase your total active capital for more daily profit and to help system’s sustainability.
+
               </p>
             </div>
             <div class="col-md-3">
@@ -1246,8 +1283,8 @@ It means your new active capital will be <span id="withdrawal-new-balance">0</sp
               />
               <h4 class="text-white text-center">Verified Code</h4>
               <p class="text-blue text-center">
-                This operates on TRON Blockchain ecosystem and DApps,
-                Transactions happen at lightning speed.
+		Fully Verified and Open Source Smart Contract. Extremely Huge Sustainable System.
+		
               </p>
             </div>
           </div>
@@ -1416,11 +1453,11 @@ It means your new active capital will be <span id="withdrawal-new-balance">0</sp
 		<div class="py-2"></div>
 		
 		<div class="text-center">
-		<a href="https://dappradar.com/tron/high-risk/tron-flow"  target="_blank" ><img src="./assets/img/dappradar.svg" alt=""></a>
+		<a href="https://dappradar.com/tron/high-risk/tron-flow"  target="_blank" ><img src="./assets/img/dappradar.png" alt=""></a>
 		 </div>
 		<div class="py-2"></div>
 		<div class="text-center">
-		<a href="https://dapp.review/dapp/TRON-FLOW"  target="_blank" ><img src="./assets/img/dappreview.svg" alt=""></a>
+		<a href="https://dapp.review/dapp/TRON-FLOW"  target="_blank" ><img src="./assets/img/dappreview.png" alt=""></a>
 		 </div>
 		<div class="py-2"></div>
 		
@@ -1897,7 +1934,7 @@ library SafeMath {
         <div class="divider"></div>
         <div class="py-2"></div>
         <div id="accordion">
-          <div class="card">
+	     <div class="card">
             <div
               class="card-header active"
               id="headingOne"
@@ -1907,7 +1944,7 @@ library SafeMath {
               aria-controls="collapseOne"
             >
               <h5 class="mb-0">
-                <button class="btn">What is refer & Earn plan ?</button>
+                <button class="btn">What is Tron Flow?</button>
               </h5>
               <div class="toggle-icon">
                 <i class="fas fa-angle-down"></i>
@@ -1922,9 +1959,72 @@ library SafeMath {
               data-parent="#accordion"
             >
               <div class="card-body">
-                This is an exclusive membership program for Vihav’s associates.
-                It offers exclusive rewards to its members when they refer VIHAV
-                to their friends & family and they buy from us.
+                Tron Flow is a shared capital distribution platform, managed automatically, securely and transparently
+		 through a verified smart contract within the Tron blockchain. No one can ever modify it or make it disappear.
+		Once you do a deposit you will begin to earn interest from it.The system will generate earnings until you get 200% of your Active Capital.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              class="card-header collapsed"
+              id="headingSix"
+              data-toggle="collapse"
+              data-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+            >
+              <h5 class="mb-0">
+                <button class="btn">How Active Capital works?</button>
+              </h5>
+              <div class="toggle-icon">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </div>
+
+            <div
+              id="collapseSix"
+              class="collapse"
+              aria-labelledby="headingSix"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                The Active Capital is the amount that is generating interest. It compounds deposits, reinvestments and referral rewards. 
+		You will be recovering this capital each time you do a withdraw. Take in mind that if you reinvest the system is firstly doing a withdraw.
+              </div>
+            </div>
+          </div>
+	<div class="card">
+            <div
+              class="card-header collapsed"
+              id="headingNine"
+              data-toggle="collapse"
+              data-target="#collapseNine"
+              aria-expanded="false"
+              aria-controls="collapseNine"
+            >
+              <h5 class="mb-0">
+                <button class="btn">How it works ROI?</button>
+              </h5>
+              <div class="toggle-icon">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </div>
+
+            <div
+              id="collapseNine"
+              class="collapse"
+              aria-labelledby="headingNine"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                ROI means "Recover of Investment". It is a ratio used to calculate the profitability speed of your Active Capital.</br>
+		As example: 5% ROI/day means you are getting 5% profits of your active capital each day.</br>
+		Tron Flow starts from a 1% ROI daily basis. For every 1.000.000 trx in the smart contract balance, ROI will increase
+by 0.1% up to a maximum of 5%. Keep in mind that just as ROI can go up, it can also go down.
+		
               </div>
             </div>
           </div>
@@ -1938,7 +2038,7 @@ library SafeMath {
               aria-controls="collapseTwo"
             >
               <h5 class="mb-0">
-                <button class="btn">How refer & Earn Works ?</button>
+                <button class="btn">How "Reinvest" works?</button>
               </h5>
               <div class="toggle-icon">
                 <i class="fas fa-angle-down"></i>
@@ -1952,10 +2052,8 @@ library SafeMath {
               data-parent="#accordion"
             >
               <div class="card-body">
-                When you refer Vihav to someone and they come to us for booking
-                their dream home, they’ll tell us your name, so that we get to
-                know that from where they learnt about our project. On verifying
-                the reference, we’ll credit the reward to your account.
+                Reinvest means to firstly do a withdraw and then automatically a reinvest. As you should did in manual mode. That means that when you reinvest the system first 		will internally withdraw your available returning capital + interest generated. That will firstly reduce from your active capital the returning capital. Just after that the system will reinvest the full amount.</br>
+As example: Your active capital is 100trx and you have 100trx of total available to withdraw (means 50trx are capital and 50trx are interest). If you decide to reinvest firstly will reduce the returning capital (50trx) from your active capital, and just after that will reinvest the full amount (100trx). Your new active capital will be 150trx.
               </div>
             </div>
           </div>
@@ -1969,7 +2067,7 @@ library SafeMath {
               aria-controls="collapseThree"
             >
               <h5 class="mb-0">
-                <button class="btn">How I can refer to my Friend ?</button>
+                <button class="btn">How "Withdraw" works?</button>
               </h5>
               <div class="toggle-icon">
                 <i class="fas fa-angle-down"></i>
@@ -1983,12 +2081,78 @@ library SafeMath {
               data-parent="#accordion"
             >
               <div class="card-body">
-                You can enter the details of your friends & family whom you want
-                to refer, directly on our website. Or else they can just let us
-                know your name and details while booking at Vihav.
+                Withdraw means you are recovering part of your capital and withdrawing interest at the same time. For this reason the "withdrawable capital" amount will be 		reduced from your active capital. The system will automatically reinvest 25% of the withdrawal amount while 75%  will go to your wallet.</br>
+As example: Your active capital is 100trx and you have 100trx of total available to withdraw (means 50trx are capital and 50trx are interest). If you decide to withdraw  firstly will reduce the returning capital (50trx) from your active capital, and just after that it will reinvest 25% of the withdrawal amount (25trx). Your new active capital will be 75trx. An you will receive 75% of the withdrawal amount to your wallet (75trx).
               </div>
             </div>
           </div>
+
+	<div class="card">
+            <div
+              class="card-header collapsed"
+              id="headingEight"
+              data-toggle="collapse"
+              data-target="#collapseEight"
+              aria-expanded="false"
+              aria-controls="collapseEight"
+            >
+              <h5 class="mb-0">
+                <button class="btn">Referral Comission</button>
+              </h5>
+              <div class="toggle-icon">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </div>
+
+            <div
+              id="collapseEight"
+              class="collapse"
+              aria-labelledby="headingEight"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                Tron Flow has 4 levels of referral comissions: 
+		<p> 1st level: 5%</br>2nd level: 3%</br>3rd level: 1%</br>4th level: 1%</p>
+
+
+		Referral comissions will increase
+		your total Active Capital for more daily profit and to help system’s sustainability
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              class="card-header collapsed"
+              id="headingSeven"
+              data-toggle="collapse"
+              data-target="#collapseSeven"
+              aria-expanded="false"
+              aria-controls="collapseSeven"
+            >
+              <h5 class="mb-0">
+                <button class="btn">How to get started with a computer?</button>
+              </h5>
+              <div class="toggle-icon">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </div>
+            <div
+              id="collapseSeven"
+              class="collapse"
+              aria-labelledby="headingSeven"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                You can install theTRONLINK chrome extension. Once installed, you can create a new Tron
+		wallet or import an existing one and transfer the desired amount of TRX. Finally, go to the Tron Flow website and
+		invest a minimum of 50trx. Take in mind that the blockchain of tron will consume 15-20trx for the transaction. 
+		So keep that amount apart. 
+              </div>
+            </div>
+          </div>
+
           <div class="card">
             <div
               class="card-header collapsed"
@@ -1999,7 +2163,7 @@ library SafeMath {
               aria-controls="collapseFour"
             >
               <h5 class="mb-0">
-                <button class="btn">What benefit my referral Get ?</button>
+                <button class="btn">How to get started with a mobile phone?</button>
               </h5>
               <div class="toggle-icon">
                 <i class="fas fa-angle-down"></i>
@@ -2013,9 +2177,15 @@ library SafeMath {
               data-parent="#accordion"
             >
               <div class="card-body">
-                The person to whom you recommended Vihav will get 6% discount on
-                their purchase. And you’ll get the same amount as a reward in
-                your account
+                You can download the TRONWALLET application on
+your IOS or Android device from the APP store.
+Once installed, you can create a new Tron wallet or
+import an existing one and transfer the desired amount
+of TRX.
+Finally, access theTron Flow website through the internal
+browser of the application and invest a minimum of
+50trx. Take in mind that the blockchain of tron will consume 15-20trx for the transaction. 
+		So keep that amount apart
               </div>
             </div>
           </div>
