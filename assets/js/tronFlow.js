@@ -421,6 +421,11 @@ let invester = await contract.players(currentAccount).call();
         ) * 2).toFixed(2)
       ); 
   
+  $('#statscipending').text(
+    parseFloat(
+        parseFloat($('#statstotaldouble').text()) - parseFloat($('#statscigenerated').text()) 
+        ).toFixed(2)
+      );  
 
 
 
