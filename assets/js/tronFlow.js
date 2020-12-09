@@ -380,6 +380,11 @@ let invester = await contract.players(currentAccount).call();
     $('#aff2').text(aff2);
     $('#aff3').text(aff3);
     $('#aff4').text(aff4);
+    $('#aff11').text(aff1);
+    $('#aff22').text(aff2);
+    $('#aff33').text(aff3);
+    $('#aff44').text(aff4);
+    $('#refrewards2').text(refrewards.toFixed(2));
   $('#statsactivecap').text(invested);
 
   
